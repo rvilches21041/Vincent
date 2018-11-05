@@ -1,0 +1,389 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "intent": "saludar",
+        "text": "HOLA"
+      },
+      {
+        "intent": "saludar",
+        "text": "HOLI"
+      },
+      {
+        "intent": "saludar",
+        "text": "HOLO"
+      },
+      {
+        "intent": "saludar",
+        "text": "HOLA AMIGO"
+      },
+      {
+        "intent": "saludar",
+        "text": "BUENOS DIAS"
+      },
+      {
+        "intent": "saludar",
+        "text": "BUENAS TARDES"
+      },
+      {
+        "intent": "saludar",
+        "text": "BUENAS NOCHES"
+      },
+      {
+        "intent": "saludar",
+        "text": "SALUDOS"
+      },
+      {
+        "intent": "saludar",
+        "text": "HOLA DENUEVO"
+      },
+      {
+        "intent": "saludar",
+        "text": "HOLA ROBOT"
+      },
+      {
+        "intent": "saludar",
+        "text": "WENA"
+      },
+      {
+        "intent": "saludarRespuesta",
+        "text": "HOLA, COMO ESTAS?"
+      },
+      {
+        "intent": "saludarRespuesta",
+        "text": "HOLA, ¿COMO ESTAS?"
+      },
+      {
+        "intent": "saludarRespuesta",
+        "text": "BUENOS DIAS, ¿COMO ESTAS?"
+      },
+      {
+        "intent": "saludarRespuesta",
+        "text": "BUENAS TARDES, ¿COMO ESTAS?"
+      },
+      {
+        "intent": "saludarRespuesta",
+        "text": "BUENAS NOCHES, ¿COMO ESTAS?"
+      },
+      {
+        "intent": "getBecas",
+        "entities": [
+          {
+            "start": 32,
+            "end": 52,
+            "value": "EXCELENCIA DEPORTIVA",
+            "entity": "beca"
+          }
+        ],
+        "text": "NECESITO INFORMACION DE LA BECA EXCELENCIA DEPORTIVA"
+      },
+      {
+        "intent": "getBecas",
+        "entities": [
+          {
+            "start": 32,
+            "end": 52,
+            "value": "EXCELENCIA DEPORTIVA",
+            "entity": "beca"
+          }
+        ],
+        "text": "QUIERO SABER A CERCA DE LA BECA EXCELENCIA DEPORTIVA"
+      },
+      {
+        "intent": "getBecas",
+        "entities": [
+          {
+            "start": 35,
+            "end": 47,
+            "value": "ALIMENTACION",
+            "entity": "beca"
+          }
+        ],
+        "text": "NECESITO INFORMACION DE LA BECA DE ALIMENTACION"
+      },
+      {
+        "intent": "getBecas",
+        "entities": [
+          {
+            "start": 32,
+            "end": 44,
+            "value": "ALIMENTACION",
+            "entity": "beca"
+          }
+        ],
+        "text": "QUIERO SABER A CERCA DE LA BECA ALIMENTACION"
+      },
+      {
+        "intent": "getBecas",
+        "entities": [
+          {
+            "start": 35,
+            "end": 41,
+            "value": "DINERO",
+            "entity": "beca"
+          }
+        ],
+        "text": "NECESITO INFORMACION DE LA BECA EN DINERO"
+      },
+      {
+        "intent": "getBecas",
+        "entities": [
+          {
+            "start": 32,
+            "end": 38,
+            "value": "DINERO",
+            "entity": "beca"
+          }
+        ],
+        "text": "QUIERO SABER A CERCA DE LA BECA DINERO"
+      },
+      {
+        "intent": "getBecas",
+        "entities": [
+          {
+            "start": 32,
+            "end": 49,
+            "value": "AYUDAS EVENTUALES",
+            "entity": "beca"
+          }
+        ],
+        "text": "NECESITO INFORMACION DE LA BECA AYUDAS EVENTUALES"
+      },
+      {
+        "intent": "getBecas",
+        "entities": [
+          {
+            "start": 32,
+            "end": 49,
+            "value": "AYUDAS EVENTUALES",
+            "entity": "beca"
+          }
+        ],
+        "text": "QUIERO SABER A CERCA DE LA BECA AYUDAS EVENTUALES"
+      },
+      {
+        "intent": "getBecas",
+        "entities": [
+          {
+            "start": 35,
+            "end": 43,
+            "value": "EXTERIOR",
+            "entity": "beca"
+          }
+        ],
+        "text": "NECESITO INFORMACION DE LA BECA AL EXTERIOR"
+      },
+      {
+        "intent": "getBecas",
+        "entities": [
+          {
+            "start": 32,
+            "end": 40,
+            "value": "EXTERIOR",
+            "entity": "beca"
+          }
+        ],
+        "text": "QUIERO SABER A CERCA DE LA BECA EXTERIOR"
+      },
+      {
+        "intent": "getBecas",
+        "text": "CUALES SON LAS BECAS QUE TIENEN"
+      },
+      {
+        "intent": "getBecas",
+        "text": "CON QUE BECAS CUENTA LA UTEM"
+      },
+      {
+        "intent": "getBecas",
+        "text": "NECESITO INFORMACION SOBRE LAS BECAS QUE MANEJAN"
+      },
+      {
+        "intent": "getBecas",
+        "text": "QUIERO SABER A CERCA DE LOS BENEFICIOS ESTUDIANTILES DE LA UNIVERSIDAD"
+      },
+      {
+        "intent": "name",
+        "entities": [
+          {
+            "start": 11,
+            "end": 16,
+            "value": "Alice",
+            "entity": "name"
+          }
+        ],
+        "text": "My name is Alice"
+      },
+      {
+        "intent": "name",
+        "entities": [
+          {
+            "start": 5,
+            "end": 9,
+            "value": "Josh",
+            "entity": "name"
+          }
+        ],
+        "text": "I am Josh"
+      },
+      {
+        "intent": "name",
+        "entities": [
+          {
+            "start": 4,
+            "end": 8,
+            "value": "Lucy",
+            "entity": "name"
+          }
+        ],
+        "text": "I'm Lucy"
+      },
+      {
+        "intent": "name",
+        "entities": [
+          {
+            "start": 15,
+            "end": 19,
+            "value": "Greg",
+            "entity": "name"
+          }
+        ],
+        "text": "People call me Greg"
+      },
+      {
+        "intent": "name",
+        "entities": [
+          {
+            "start": 5,
+            "end": 10,
+            "value": "David",
+            "entity": "name"
+          }
+        ],
+        "text": "It's David"
+      },
+      {
+        "intent": "name",
+        "entities": [
+          {
+            "start": 23,
+            "end": 26,
+            "value": "Amy",
+            "entity": "name"
+          }
+        ],
+        "text": "Usually people call me Amy"
+      },
+      {
+        "intent": "name",
+        "entities": [
+          {
+            "start": 11,
+            "end": 15,
+            "value": "John",
+            "entity": "name"
+          }
+        ],
+        "text": "My name is John"
+      },
+      {
+        "intent": "name",
+        "entities": [
+          {
+            "start": 16,
+            "end": 19,
+            "value": "Sam",
+            "entity": "name"
+          }
+        ],
+        "text": "You can call me Sam"
+      },
+      {
+        "intent": "name",
+        "entities": [
+          {
+            "start": 15,
+            "end": 20,
+            "value": "Linda",
+            "entity": "name"
+          }
+        ],
+        "text": "Please call me Linda"
+      },
+      {
+        "intent": "name",
+        "entities": [
+          {
+            "start": 13,
+            "end": 16,
+            "value": "Tom",
+            "entity": "name"
+          }
+        ],
+        "text": "Name name is Tom"
+      },
+      {
+        "intent": "name",
+        "entities": [
+          {
+            "start": 5,
+            "end": 12,
+            "value": "Richard",
+            "entity": "name"
+          }
+        ],
+        "text": "I am Richard"
+      },
+      {
+        "intent": "name",
+        "entities": [
+          {
+            "start": 4,
+            "end": 9,
+            "value": "Tracy",
+            "entity": "name"
+          }
+        ],
+        "text": "I'm Tracy"
+      },
+      {
+        "intent": "name",
+        "entities": [
+          {
+            "start": 8,
+            "end": 13,
+            "value": "Sally",
+            "entity": "name"
+          }
+        ],
+        "text": "Call me Sally"
+      },
+      {
+        "intent": "name",
+        "entities": [
+          {
+            "start": 5,
+            "end": 12,
+            "value": "Philipp",
+            "entity": "name"
+          }
+        ],
+        "text": "I am Philipp"
+      },
+      {
+        "intent": "name",
+        "entities": [
+          {
+            "start": 5,
+            "end": 12,
+            "value": "Charlie",
+            "entity": "name"
+          }
+        ],
+        "text": "I am Charlie"
+      }
+    ],
+    "regex_features": [],
+    "lookup_tables": [],
+    "entity_synonyms": []
+  }
+}
