@@ -1,0 +1,925 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "intent": "get_becas",
+        "entities": [
+          {
+            "start": 0,
+            "end": 20,
+            "value": "excelencia deportiva",
+            "entity": "beca"
+          }
+        ],
+        "text": "excelencia deportiva"
+      },
+      {
+        "intent": "get_becas",
+        "entities": [
+          {
+            "start": 0,
+            "end": 12,
+            "value": "alimentacion",
+            "entity": "beca"
+          }
+        ],
+        "text": "alimentacion"
+      },
+      {
+        "intent": "get_becas",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "dinero",
+            "entity": "beca"
+          }
+        ],
+        "text": "dinero"
+      },
+      {
+        "intent": "get_becas",
+        "entities": [
+          {
+            "start": 0,
+            "end": 17,
+            "value": "ayudas eventuales",
+            "entity": "beca"
+          }
+        ],
+        "text": "ayudas eventuales"
+      },
+      {
+        "intent": "get_becas",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "exterior",
+            "entity": "beca"
+          }
+        ],
+        "text": "exterior"
+      },
+      {
+        "intent": "get_becas",
+        "entities": [
+          {
+            "start": 32,
+            "end": 52,
+            "value": "excelencia deportiva",
+            "entity": "beca"
+          }
+        ],
+        "text": "necesito informacion de la beca excelencia deportiva"
+      },
+      {
+        "intent": "get_becas",
+        "entities": [
+          {
+            "start": 32,
+            "end": 52,
+            "value": "excelencia deportiva",
+            "entity": "beca"
+          }
+        ],
+        "text": "quiero saber a cerca de la beca excelencia deportiva"
+      },
+      {
+        "intent": "get_becas",
+        "entities": [
+          {
+            "start": 35,
+            "end": 47,
+            "value": "alimentacion",
+            "entity": "beca"
+          }
+        ],
+        "text": "necesito informacion de la beca de alimentacion"
+      },
+      {
+        "intent": "get_becas",
+        "entities": [
+          {
+            "start": 32,
+            "end": 44,
+            "value": "alimentacion",
+            "entity": "beca"
+          }
+        ],
+        "text": "quiero saber a cerca de la beca alimentacion"
+      },
+      {
+        "intent": "get_becas",
+        "entities": [
+          {
+            "start": 35,
+            "end": 41,
+            "value": "dinero",
+            "entity": "beca"
+          }
+        ],
+        "text": "necesito informacion de la beca en dinero"
+      },
+      {
+        "intent": "get_becas",
+        "entities": [
+          {
+            "start": 32,
+            "end": 38,
+            "value": "dinero",
+            "entity": "beca"
+          }
+        ],
+        "text": "quiero saber a cerca de la beca dinero"
+      },
+      {
+        "intent": "get_becas",
+        "entities": [
+          {
+            "start": 32,
+            "end": 49,
+            "value": "ayudas eventuales",
+            "entity": "beca"
+          }
+        ],
+        "text": "necesito informacion de la beca ayudas eventuales"
+      },
+      {
+        "intent": "get_becas",
+        "entities": [
+          {
+            "start": 32,
+            "end": 49,
+            "value": "ayudas eventuales",
+            "entity": "beca"
+          }
+        ],
+        "text": "quiero saber a cerca de la beca ayudas eventuales"
+      },
+      {
+        "intent": "get_becas",
+        "entities": [
+          {
+            "start": 35,
+            "end": 43,
+            "value": "exterior",
+            "entity": "beca"
+          }
+        ],
+        "text": "necesito informacion de la beca al exterior"
+      },
+      {
+        "intent": "get_becas",
+        "entities": [
+          {
+            "start": 32,
+            "end": 40,
+            "value": "exterior",
+            "entity": "beca"
+          }
+        ],
+        "text": "quiero saber a cerca de la beca exterior"
+      },
+      {
+        "intent": "get_becas",
+        "text": "cuales son las becas que tienen"
+      },
+      {
+        "intent": "get_becas",
+        "text": "con que becas cuenta la utem"
+      },
+      {
+        "intent": "get_becas",
+        "text": "necesito informacion sobre las becas que manejan"
+      },
+      {
+        "intent": "get_becas",
+        "text": "quiero saber a cerca de los beneficios estudiantiles de la universidad"
+      },
+      {
+        "intent": "get_cod_carr",
+        "entities": [
+          {
+            "start": 37,
+            "end": 68,
+            "value": "ingenieria civil en computacion",
+            "entity": "carrera"
+          }
+        ],
+        "text": "quiero saber el codigo de carrera de ingenieria civil en computacion"
+      },
+      {
+        "intent": "get_cod_carr",
+        "entities": [
+          {
+            "start": 47,
+            "end": 74,
+            "value": "ingenieria civil industrial",
+            "entity": "carrera"
+          }
+        ],
+        "text": "de casualidad no sabes el codigo de la carrera ingenieria civil industrial"
+      },
+      {
+        "intent": "get_cod_carr",
+        "entities": [
+          {
+            "start": 34,
+            "end": 46,
+            "value": "arquitectura",
+            "entity": "carrera"
+          }
+        ],
+        "text": "necesito saber el codigo demre de arquitectura"
+      },
+      {
+        "intent": "get_cod_carr",
+        "entities": [
+          {
+            "start": 47,
+            "end": 72,
+            "value": "ingenieria en informatica",
+            "entity": "carrera"
+          }
+        ],
+        "text": "me gustaria conocer el codigo de la carrera de ingenieria en informatica"
+      },
+      {
+        "intent": "get_cod_carr",
+        "entities": [
+          {
+            "start": 39,
+            "end": 60,
+            "value": "dibujante proyectista",
+            "entity": "carrera"
+          }
+        ],
+        "text": "deseo saber el codigo de la carrera de dibujante proyectista"
+      },
+      {
+        "intent": "get_duracion_carr",
+        "entities": [
+          {
+            "start": 34,
+            "end": 65,
+            "value": "ingenieria civil en electronica",
+            "entity": "carrera"
+          }
+        ],
+        "text": "cual es la duracion de la carrera ingenieria civil en electronica"
+      },
+      {
+        "intent": "get_duracion_carr",
+        "entities": [
+          {
+            "start": 34,
+            "end": 58,
+            "value": "ingenieria en geomensura",
+            "entity": "carrera"
+          }
+        ],
+        "text": "cuantos semestres dura la carrera ingenieria en geomensura"
+      },
+      {
+        "intent": "get_duracion_carr",
+        "entities": [
+          {
+            "start": 31,
+            "end": 66,
+            "value": "ingenieria en transporte y transito",
+            "entity": "carrera"
+          }
+        ],
+        "text": "cuantos años tiene de duracion ingenieria en transporte y transito"
+      },
+      {
+        "intent": "get_duracion_carr",
+        "entities": [
+          {
+            "start": 12,
+            "end": 29,
+            "value": "diseño industrial",
+            "entity": "carrera"
+          }
+        ],
+        "text": "cuanto dura diseño industrial"
+      },
+      {
+        "intent": "get_info_universidad",
+        "text": "quiero saber mas sobre la universidad"
+      },
+      {
+        "intent": "get_info_universidad",
+        "text": "cuales son los campus que tiene?"
+      },
+      {
+        "intent": "get_info_universidad",
+        "text": "cuantos campus tiene la utem"
+      },
+      {
+        "intent": "get_info_universidad",
+        "text": "como se llaman los campus que tiene la universidad tecnologica metropolitana"
+      },
+      {
+        "intent": "get_info_universidad",
+        "text": "necesito saber la ubicacion de los campus"
+      },
+      {
+        "intent": "pregunta_acciones_bot",
+        "text": "ayuda"
+      },
+      {
+        "intent": "pregunta_acciones_bot",
+        "text": "ayuda porfavor"
+      },
+      {
+        "intent": "pregunta_acciones_bot",
+        "text": "ayuda, porfavor"
+      },
+      {
+        "intent": "pregunta_acciones_bot",
+        "text": "no se que es lo que quiero"
+      },
+      {
+        "intent": "pregunta_acciones_bot",
+        "text": "no sè què es lo que quiero"
+      },
+      {
+        "intent": "pregunta_acciones_bot",
+        "text": "necesito ayuda"
+      },
+      {
+        "intent": "pregunta_acciones_bot",
+        "text": "opciones"
+      },
+      {
+        "intent": "pregunta_acciones_bot",
+        "text": "muestrame el menù"
+      },
+      {
+        "intent": "pregunta_acciones_bot",
+        "text": "muestrame el menu"
+      },
+      {
+        "intent": "pregunta_acciones_bot",
+        "text": "muestrame que es posible"
+      },
+      {
+        "intent": "pregunta_acciones_bot",
+        "text": "que es lo que puedes hacer?"
+      },
+      {
+        "intent": "pregunta_acciones_bot",
+        "text": "¿que es lo que puedes hacer?"
+      },
+      {
+        "intent": "pregunta_acciones_bot",
+        "text": "en que eres bueno?"
+      },
+      {
+        "intent": "pregunta_acciones_bot",
+        "text": "que puedo hacer aquì"
+      },
+      {
+        "intent": "pregunta_acciones_bot",
+        "text": "que puedo hacer con este bot"
+      },
+      {
+        "intent": "pregunta_acciones_bot",
+        "text": "para que es este bot"
+      },
+      {
+        "intent": "pregunta_acciones_bot",
+        "text": "puedo hacer algo mas aqui?"
+      },
+      {
+        "intent": "pregunta_acciones_bot",
+        "text": "ayudame"
+      },
+      {
+        "intent": "pregunta_acciones_bot",
+        "text": "hablame!"
+      },
+      {
+        "intent": "pregunta_acciones_bot",
+        "text": "vuelve"
+      },
+      {
+        "intent": "pregunta_acciones_bot",
+        "text": "como me puedes ayudar"
+      },
+      {
+        "intent": "pregunta_acciones_bot",
+        "text": "que mas puedo hacer"
+      },
+      {
+        "intent": "pregunta_acciones_bot",
+        "text": "hay alguna otra opcion?"
+      },
+      {
+        "intent": "pregunta_acciones_bot",
+        "text": "que puedo hacer aqui"
+      },
+      {
+        "intent": "pregunta_acciones_bot",
+        "text": "que puedo hacer ahora"
+      },
+      {
+        "intent": "pregunta_acciones_bot",
+        "text": "ayuda?"
+      },
+      {
+        "intent": "saludar",
+        "text": "Hola"
+      },
+      {
+        "intent": "saludar",
+        "text": "Hola bot"
+      },
+      {
+        "intent": "saludar",
+        "text": "hola de nuevo"
+      },
+      {
+        "intent": "saludar",
+        "text": "hola amigo"
+      },
+      {
+        "intent": "saludar",
+        "text": "hola amiga"
+      },
+      {
+        "intent": "saludar",
+        "text": "holi"
+      },
+      {
+        "intent": "saludar",
+        "text": "holo"
+      },
+      {
+        "intent": "saludar",
+        "text": "hola amigo"
+      },
+      {
+        "intent": "saludar",
+        "text": "hola denuevo"
+      },
+      {
+        "intent": "saludar",
+        "text": "hola robot"
+      },
+      {
+        "intent": "saludar",
+        "text": "wena"
+      },
+      {
+        "intent": "saludar",
+        "text": "wena hermano"
+      },
+      {
+        "intent": "saludar",
+        "text": "wena compare"
+      },
+      {
+        "intent": "saludar",
+        "text": "Hey"
+      },
+      {
+        "intent": "saludar",
+        "text": "Hey bot"
+      },
+      {
+        "intent": "saludar",
+        "text": "buenos dias"
+      },
+      {
+        "intent": "saludar",
+        "text": "saludos"
+      },
+      {
+        "intent": "saludar",
+        "text": "hola a todos"
+      },
+      {
+        "intent": "saludar",
+        "text": "hola, hay alguien ahi"
+      },
+      {
+        "intent": "saludar",
+        "text": "hola hay alguien ahi"
+      },
+      {
+        "intent": "saludar",
+        "text": "hola, hay alguien ahi?"
+      },
+      {
+        "intent": "saludar",
+        "text": "hola, hay alguien ahì?"
+      },
+      {
+        "intent": "saludar",
+        "text": "hola, ¿hay alguien ahì?"
+      },
+      {
+        "intent": "saludar",
+        "text": "hola robot"
+      },
+      {
+        "intent": "saludar",
+        "text": "ola"
+      },
+      {
+        "intent": "saludar",
+        "text": "hola?"
+      },
+      {
+        "intent": "saludar",
+        "text": "hola, vamos a hablar"
+      },
+      {
+        "intent": "saludar",
+        "text": "hola vamos a hablar"
+      },
+      {
+        "intent": "saludar",
+        "text": "hola soy yo de nuevo"
+      },
+      {
+        "intent": "saludar",
+        "text": "Buenas tardes"
+      },
+      {
+        "intent": "saludar",
+        "text": "buenas noches"
+      },
+      {
+        "intent": "pregunta_estado",
+        "text": "como estas?"
+      },
+      {
+        "intent": "pregunta_estado",
+        "text": "estas bien?"
+      },
+      {
+        "intent": "pregunta_estado",
+        "text": "estas teniendo un buen dia?"
+      },
+      {
+        "intent": "pregunta_estado",
+        "text": "te sientes bien?"
+      },
+      {
+        "intent": "pregunta_estado",
+        "text": "como van las cosas?"
+      },
+      {
+        "intent": "pregunta_estado",
+        "text": "como te trata la vida?"
+      },
+      {
+        "intent": "pregunta_estado",
+        "text": "como le ha ido?"
+      },
+      {
+        "intent": "pregunta_estado",
+        "text": "como te sientes?"
+      },
+      {
+        "intent": "pregunta_estado",
+        "text": "como estas hoy?"
+      },
+      {
+        "intent": "pregunta_estado",
+        "text": "como has estado?"
+      },
+      {
+        "intent": "pregunta_estado",
+        "text": "como va tu dia?"
+      },
+      {
+        "intent": "pregunta_estado",
+        "text": "como va la tarde?"
+      },
+      {
+        "intent": "pregunta_estado",
+        "text": "como estuvo tu dia?"
+      },
+      {
+        "intent": "pregunta_estado",
+        "text": "bien y tu"
+      },
+      {
+        "intent": "pregunta_estado",
+        "text": "yo estoy bien y tu"
+      },
+      {
+        "intent": "pregunta_estado",
+        "text": "esta todo bien?"
+      },
+      {
+        "intent": "pregunta_estado",
+        "text": "que pasa"
+      },
+      {
+        "intent": "agradecer",
+        "text": "gracias"
+      },
+      {
+        "intent": "agradecer",
+        "text": "gracias a ti"
+      },
+      {
+        "intent": "agradecer",
+        "text": "muchas gracias"
+      },
+      {
+        "intent": "agradecer",
+        "text": "gracias bot"
+      },
+      {
+        "intent": "agradecer",
+        "text": "gracias por eso"
+      },
+      {
+        "intent": "agradecer",
+        "text": "saludos"
+      },
+      {
+        "intent": "agradecer",
+        "text": "saludos hermano"
+      },
+      {
+        "intent": "agradecer",
+        "text": "ok gracias!"
+      },
+      {
+        "intent": "agradecer",
+        "text": "perfecto gracias"
+      },
+      {
+        "intent": "agradecer",
+        "text": "muchas gracias por todo"
+      },
+      {
+        "intent": "agradecer",
+        "text": "gracias por la ayuda"
+      },
+      {
+        "intent": "agradecer",
+        "text": "de verdad muchas gracias"
+      },
+      {
+        "intent": "agradecer",
+        "text": "bacan, gracias"
+      },
+      {
+        "intent": "agradecer",
+        "text": "muy bien, gracias"
+      },
+      {
+        "intent": "agradecer",
+        "text": "gracias!"
+      },
+      {
+        "intent": "agradecer",
+        "text": "bacan. gracias"
+      },
+      {
+        "intent": "afirmar",
+        "text": "si"
+      },
+      {
+        "intent": "afirmar",
+        "text": "claro"
+      },
+      {
+        "intent": "afirmar",
+        "text": "obvio"
+      },
+      {
+        "intent": "afirmar",
+        "text": "por supuesto"
+      },
+      {
+        "intent": "afirmar",
+        "text": "ok"
+      },
+      {
+        "intent": "afirmar",
+        "text": "bacan"
+      },
+      {
+        "intent": "afirmar",
+        "text": "hare eso"
+      },
+      {
+        "intent": "afirmar",
+        "text": "sip"
+      },
+      {
+        "intent": "afirmar",
+        "text": "sipo"
+      },
+      {
+        "intent": "afirmar",
+        "text": "estoy seguro de que lo hare"
+      },
+      {
+        "intent": "afirmar",
+        "text": "oh bacan!"
+      },
+      {
+        "intent": "afirmar",
+        "text": "SI"
+      },
+      {
+        "intent": "afirmar",
+        "text": "acepto"
+      },
+      {
+        "intent": "afirmar",
+        "text": "yo acepto"
+      },
+      {
+        "intent": "afirmar",
+        "text": "ok de acuerdo"
+      },
+      {
+        "intent": "afirmar",
+        "text": "ok cool"
+      },
+      {
+        "intent": "afirmar",
+        "text": "lo hare!"
+      },
+      {
+        "intent": "afirmar",
+        "text": "oki doki"
+      },
+      {
+        "intent": "afirmar",
+        "text": "si porfavor"
+      },
+      {
+        "intent": "afirmar",
+        "text": "si porfavor!"
+      },
+      {
+        "intent": "afirmar",
+        "text": "confirmo"
+      },
+      {
+        "intent": "afirmar",
+        "text": "definitivamente si"
+      },
+      {
+        "intent": "afirmar",
+        "text": "perfecto"
+      },
+      {
+        "intent": "afirmar",
+        "text": "Oh, ok"
+      },
+      {
+        "intent": "negacion",
+        "text": "no"
+      },
+      {
+        "intent": "negacion",
+        "text": "nica"
+      },
+      {
+        "intent": "negacion",
+        "text": "nunca"
+      },
+      {
+        "intent": "negacion",
+        "text": "obvio que no"
+      },
+      {
+        "intent": "negacion",
+        "text": "yo no lo creo"
+      },
+      {
+        "intent": "negacion",
+        "text": "no señor"
+      },
+      {
+        "intent": "negacion",
+        "text": "no señora"
+      },
+      {
+        "intent": "negacion",
+        "text": "disculpa, no"
+      },
+      {
+        "intent": "negacion",
+        "text": "nah"
+      },
+      {
+        "intent": "negacion",
+        "text": "no y no"
+      },
+      {
+        "intent": "negacion",
+        "text": "no gracias"
+      },
+      {
+        "intent": "negacion",
+        "text": "me niego"
+      },
+      {
+        "intent": "negacion",
+        "text": "no importa"
+      },
+      {
+        "intent": "negacion",
+        "text": "no no acepto"
+      },
+      {
+        "intent": "negacion",
+        "text": "no!!!!"
+      },
+      {
+        "intent": "negacion",
+        "text": "no lo hiciste mal"
+      },
+      {
+        "intent": "negacion",
+        "text": "eso no es lo que quiero"
+      },
+      {
+        "intent": "negacion",
+        "text": "eso no es lo que queria"
+      },
+      {
+        "intent": "negacion",
+        "text": "no no puedo"
+      },
+      {
+        "intent": "negacion",
+        "text": "no estoy seguro"
+      },
+      {
+        "intent": "negacion",
+        "text": "no gracias"
+      },
+      {
+        "intent": "negacion",
+        "text": "ninguna de las anteriores"
+      },
+      {
+        "intent": "despedida",
+        "text": "adios"
+      },
+      {
+        "intent": "despedida",
+        "text": "chao"
+      },
+      {
+        "intent": "despedida",
+        "text": "chaolin"
+      },
+      {
+        "intent": "despedida",
+        "text": "buenas noches"
+      },
+      {
+        "intent": "despedida",
+        "text": "nos vemos"
+      },
+      {
+        "intent": "despedida",
+        "text": "que tengas buenas noches"
+      },
+      {
+        "intent": "despedida",
+        "text": "me tengo que ir"
+      },
+      {
+        "intent": "despedida",
+        "text": "que estes bien"
+      },
+      {
+        "intent": "despedida",
+        "text": "nos vemos despues"
+      },
+      {
+        "intent": "despedida",
+        "text": "adios por ahora"
+      },
+      {
+        "intent": "despedida",
+        "text": "chao, fue bacan hablar contigo"
+      },
+      {
+        "intent": "despedida",
+        "text": "gracias, adios!"
+      }
+    ],
+    "regex_features": [],
+    "lookup_tables": [],
+    "entity_synonyms": []
+  }
+}

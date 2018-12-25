@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/rolando/Escritorio/Vincent/rasa-nlu/models/current/model_20181225-175013/intent_classifier_tensorflow_embedding.ckpt"
+all_model_checkpoint_paths: "/home/rolando/Escritorio/Vincent/rasa-nlu/models/current/model_20181225-175013/intent_classifier_tensorflow_embedding.ckpt"
