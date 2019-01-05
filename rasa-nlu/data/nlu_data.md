@@ -1,4 +1,4 @@
-## intent:get_becas
+## intent:get_info_beca
 - [excelencia deportiva](beca)
 - [alimentacion](beca)
 - [dinero](beca)
@@ -33,6 +33,7 @@
 - cuantos semestres dura la carrera [ingenieria en geomensura](carrera)
 - cuantos años tiene de duracion [ingenieria en transporte y transito](carrera)
 - cuanto dura [diseño industrial](carrera)
+- cual es el tiempo de duracion de la carrera [Trabajo social](carrera)
 
 ##intent: get_info_universidad
 -quiero saber mas sobre la universidad
