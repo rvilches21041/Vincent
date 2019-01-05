@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/rolando/Escritorio/Vincent/models/current/model_20190105-014048/intent_classifier_tensorflow_embedding.ckpt"
+all_model_checkpoint_paths: "/home/rolando/Escritorio/Vincent/models/current/model_20190105-014048/intent_classifier_tensorflow_embedding.ckpt"

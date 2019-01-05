@@ -1,0 +1,2271 @@
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Webhook Setup Successful
+Rasa Core server is up and running on http://localhost:5005
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Entering: set_webhook
+Starting new HTTPS connection (1): api.telegram.org
+https://api.telegram.org:443 "POST /bot712819921:AAHVWXQz8j3iah_Q8_rsqFVz-eOcb3_tVKo/setWebhook HTTP/1.1" 200 64
+True
+Exiting: set_webhook
+Webhook Setup Successful
+Available web server routes: 
+static                                             GET, HEAD, OPTIONS             /static/[filename]
+telegram_webhook.health                            GET, HEAD, OPTIONS             /webhooks/telegram/
+telegram_webhook.set_webhook                       GET, HEAD, OPTIONS, POST       /webhooks/telegram/set_webhook
+telegram_webhook.message                           GET, HEAD, OPTIONS, POST       /webhooks/telegram/webhook
+Rasa Core server is up and running on http://localhost:5005
+Entering: get_me
+https://api.telegram.org:443 "GET /bot712819921:AAHVWXQz8j3iah_Q8_rsqFVz-eOcb3_tVKo/getMe HTTP/1.1" 200 100
+{'id': 712819921, 'first_name': 'vincent', 'is_bot': True, 'username': 'VincentVnBot'}
+Exiting: get_me
+Creating a new tracker for id '666640342'.
+Received user message 'chao' with intent '{'name': 'despedida', 'confidence': 0.9709593057632446}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	name: None
+Current tracker state [None, {}, {'prev_action_listen': 1.0, 'intent_despedida': 1.0}]
+There is a memorised next action '5'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'utter_despedirse' with prob 1.00.
+Entering: send_message
+https://api.telegram.org:443 "POST /bot712819921:AAHVWXQz8j3iah_Q8_rsqFVz-eOcb3_tVKo/sendMessage HTTP/1.1" 200 219
+{'message_id': 64, 'date': 1546638406, 'chat': {'id': 666640342, 'type': 'private', 'first_name': 'Jokar'}, 'text': 'chao', 'entities': [], 'caption_entities': [], 'photo': [], 'new_chat_members': [], 'new_chat_photo': [], 'delete_chat_photo': False, 'group_chat_created': False, 'supergroup_chat_created': False, 'channel_chat_created': False, 'from': {'id': 712819921, 'first_name': 'vincent', 'is_bot': True, 'username': 'VincentVnBot'}}
+Exiting: send_message
+Action 'utter_despedirse' ended with events '[]'
+Bot utterance 'BotUttered(text: chao, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{}, {'prev_action_listen': 1.0, 'intent_despedida': 1.0}, {'prev_utter_despedirse': 1.0, 'intent_despedida': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Entering: get_me
+https://api.telegram.org:443 "GET /bot712819921:AAHVWXQz8j3iah_Q8_rsqFVz-eOcb3_tVKo/getMe HTTP/1.1" 200 100
+{'id': 712819921, 'first_name': 'vincent', 'is_bot': True, 'username': 'VincentVnBot'}
+Exiting: get_me
+Recreating tracker for id '666640342'
+Received user message 'cual es la beca ayudas eventuales' with intent '{'name': 'get_becas', 'confidence': 0.9356435537338257}' and entities '[{'start': 16, 'end': 33, 'value': 'ayudas eventuales', 'entity': 'beca', 'confidence': 0.950401460292343, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 6 events
+Current slot values: 
+	name: None
+Current tracker state [{'prev_action_listen': 1.0, 'intent_despedida': 1.0}, {'prev_utter_despedirse': 1.0, 'intent_despedida': 1.0}, {'intent_get_becas': 1.0, 'prev_action_listen': 1.0, 'entity_beca': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_getBecas' with prob 0.47.
+Calling action endpoint to run action 'action_getBecas'.
+Entering: send_message
+https://api.telegram.org:443 "POST /bot712819921:AAHVWXQz8j3iah_Q8_rsqFVz-eOcb3_tVKo/sendMessage HTTP/1.1" 200 230
+{'message_id': 66, 'date': 1546638463, 'chat': {'id': 666640342, 'type': 'private', 'first_name': 'Jokar'}, 'text': 'estoy conectado', 'entities': [], 'caption_entities': [], 'photo': [], 'new_chat_members': [], 'new_chat_photo': [], 'delete_chat_photo': False, 'group_chat_created': False, 'supergroup_chat_created': False, 'channel_chat_created': False, 'from': {'id': 712819921, 'first_name': 'vincent', 'is_bot': True, 'username': 'VincentVnBot'}}
+Exiting: send_message
+Action 'action_getBecas' ended with events '[]'
+Bot utterance 'BotUttered(text: estoy conectado, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'prev_utter_despedirse': 1.0, 'intent_despedida': 1.0}, {'intent_get_becas': 1.0, 'prev_action_listen': 1.0, 'entity_beca': 1.0}, {'intent_get_becas': 1.0, 'prev_action_getBecas': 1.0, 'entity_beca': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 0.88.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Rasa Core server is up and running on http://localhost:5005
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             HEAD, GET, OPTIONS             /static/[filename]
+custom_webhook_CmdlineInput.health                 HEAD, GET, OPTIONS             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'que becas tiene la utem' with intent '{'name': 'get_becas', 'confidence': 0.8188998699188232}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	name: None
+Current tracker state [None, {}, {'prev_action_listen': 1.0, 'intent_get_becas': 1.0}]
+There is a memorised next action '6'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_getBecas' with prob 1.00.
+Calling action endpoint to run action 'action_getBecas'.
+Action 'action_getBecas' ended with events '[]'
+Bot utterance 'BotUttered(text: estoy conectado, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{}, {'prev_action_listen': 1.0, 'intent_get_becas': 1.0}, {'prev_action_getBecas': 1.0, 'intent_get_becas': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             GET, HEAD, OPTIONS             /static/[filename]
+custom_webhook_CmdlineInput.health                 GET, HEAD, OPTIONS             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'cuales son las becas de la utem' with intent '{'name': 'get_becas', 'confidence': 0.936516523361206}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	name: None
+Current tracker state [None, {}, {'intent_get_becas': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '6'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_getBecas' with prob 1.00.
+Calling action endpoint to run action 'action_getBecas'.
+Action 'action_getBecas' ended with events '[]'
+Bot utterance 'BotUttered(text: estoy conectado, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{}, {'intent_get_becas': 1.0, 'prev_action_listen': 1.0}, {'prev_action_getBecas': 1.0, 'intent_get_becas': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             GET, HEAD, OPTIONS             /static/[filename]
+custom_webhook_CmdlineInput.health                 GET, HEAD, OPTIONS             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'quiero saber las becas que tiene la utem' with intent '{'name': 'get_becas', 'confidence': 0.9155945181846619}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	name: None
+Current tracker state [None, {}, {'intent_get_becas': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '6'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_getBecas' with prob 1.00.
+Calling action endpoint to run action 'action_getBecas'.
+Action 'action_getBecas' ended with events '[]'
+Bot utterance 'BotUttered(text: estoy conectado, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{}, {'intent_get_becas': 1.0, 'prev_action_listen': 1.0}, {'prev_action_getBecas': 1.0, 'intent_get_becas': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             HEAD, OPTIONS, GET             /static/[filename]
+custom_webhook_CmdlineInput.health                 HEAD, OPTIONS, GET             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'que becas tiene la utem' with intent '{'name': 'get_becas', 'confidence': 0.8188998699188232}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	name: None
+Current tracker state [None, {}, {'prev_action_listen': 1.0, 'intent_get_becas': 1.0}]
+There is a memorised next action '4'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'utter_saludar' with prob 1.00.
+Action 'utter_saludar' ended with events '[]'
+Bot utterance 'BotUttered(text: hola, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{}, {'prev_action_listen': 1.0, 'intent_get_becas': 1.0}, {'intent_get_becas': 1.0, 'prev_utter_saludar': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             HEAD, OPTIONS, GET             /static/[filename]
+custom_webhook_CmdlineInput.health                 HEAD, OPTIONS, GET             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'que becas tiene la utem' with intent '{'name': 'get_becas', 'confidence': 0.8188998699188232}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	name: None
+Current tracker state [None, {}, {'intent_get_becas': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '6'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_getBecas' with prob 1.00.
+Calling action endpoint to run action 'action_getBecas'.
+Action 'action_getBecas' ended with events '[]'
+Bot utterance 'BotUttered(text: estoy conectado, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{}, {'intent_get_becas': 1.0, 'prev_action_listen': 1.0}, {'intent_get_becas': 1.0, 'prev_action_getBecas': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             HEAD, GET, OPTIONS             /static/[filename]
+custom_webhook_CmdlineInput.health                 HEAD, GET, OPTIONS             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'cuales son las bcas de la utem' with intent '{'name': 'get_becas', 'confidence': 0.8265100717544556}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	name: None
+Current tracker state [None, {}, {'intent_get_becas': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '6'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_getBecas' with prob 1.00.
+Calling action endpoint to run action 'action_getBecas'.
+Action 'action_getBecas' ended with events '[]'
+Bot utterance 'BotUttered(text: estoy conectado, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{}, {'intent_get_becas': 1.0, 'prev_action_listen': 1.0}, {'intent_get_becas': 1.0, 'prev_action_getBecas': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             HEAD, GET, OPTIONS             /static/[filename]
+custom_webhook_CmdlineInput.health                 HEAD, GET, OPTIONS             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             OPTIONS, GET, HEAD             /static/[filename]
+custom_webhook_CmdlineInput.health                 OPTIONS, GET, HEAD             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'cuales son las becas de la utem' with intent '{'name': 'get_becas', 'confidence': 0.936516523361206}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	name: None
+Current tracker state [None, {}, {'intent_get_becas': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '6'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_getBecas' with prob 1.00.
+Calling action endpoint to run action 'action_getBecas'.
+Action 'action_getBecas' ended with events '[]'
+Bot utterance 'BotUttered(text: estoy conectado, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{}, {'intent_get_becas': 1.0, 'prev_action_listen': 1.0}, {'intent_get_becas': 1.0, 'prev_action_getBecas': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             HEAD, GET, OPTIONS             /static/[filename]
+custom_webhook_CmdlineInput.health                 HEAD, GET, OPTIONS             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             GET, HEAD, OPTIONS             /static/[filename]
+custom_webhook_CmdlineInput.health                 GET, HEAD, OPTIONS             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             GET, OPTIONS, HEAD             /static/[filename]
+custom_webhook_CmdlineInput.health                 GET, OPTIONS, HEAD             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             HEAD, OPTIONS, GET             /static/[filename]
+custom_webhook_CmdlineInput.health                 HEAD, OPTIONS, GET             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'cuales son las becas de la utem' with intent '{'name': 'get_becas', 'confidence': 0.936516523361206}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	name: None
+Current tracker state [None, {}, {'prev_action_listen': 1.0, 'intent_get_becas': 1.0}]
+There is a memorised next action '6'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_getBecas' with prob 1.00.
+Calling action endpoint to run action 'action_getBecas'.
+Failed to run custom action 'action_getBecas'. Action server responded with a non 200 status code of 500. Make sure your action server properly runs actions and returns a 200 once the action is executed. Error: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+Encountered an exception while running action 'action_getBecas'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Failed to execute custom action.
+Traceback (most recent call last):
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 338, in run
+    response.raise_for_status()
+  File "/home/rolando/.local/lib/python3.6/site-packages/requests/models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/processor.py", line 351, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 358, in run
+    raise Exception("Failed to execute custom action.")
+Exception: Failed to execute custom action.
+Action 'action_getBecas' ended with events '[]'
+Current tracker state [{}, {'prev_action_listen': 1.0, 'intent_get_becas': 1.0}, {'prev_action_getBecas': 1.0, 'intent_get_becas': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             HEAD, GET, OPTIONS             /static/[filename]
+custom_webhook_CmdlineInput.health                 HEAD, GET, OPTIONS             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             HEAD, OPTIONS, GET             /static/[filename]
+custom_webhook_CmdlineInput.health                 HEAD, OPTIONS, GET             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'cuales son las becas de la utem' with intent '{'name': 'get_becas', 'confidence': 0.936516523361206}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	name: None
+Current tracker state [None, {}, {'intent_get_becas': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '6'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_getBecas' with prob 1.00.
+Calling action endpoint to run action 'action_getBecas'.
+Failed to run custom action 'action_getBecas'. Action server responded with a non 200 status code of 500. Make sure your action server properly runs actions and returns a 200 once the action is executed. Error: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+Encountered an exception while running action 'action_getBecas'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Failed to execute custom action.
+Traceback (most recent call last):
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 338, in run
+    response.raise_for_status()
+  File "/home/rolando/.local/lib/python3.6/site-packages/requests/models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/processor.py", line 351, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 358, in run
+    raise Exception("Failed to execute custom action.")
+Exception: Failed to execute custom action.
+Action 'action_getBecas' ended with events '[]'
+Current tracker state [{}, {'intent_get_becas': 1.0, 'prev_action_listen': 1.0}, {'intent_get_becas': 1.0, 'prev_action_getBecas': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             OPTIONS, HEAD, GET             /static/[filename]
+custom_webhook_CmdlineInput.health                 OPTIONS, HEAD, GET             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             GET, OPTIONS, HEAD             /static/[filename]
+custom_webhook_CmdlineInput.health                 GET, OPTIONS, HEAD             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             HEAD, OPTIONS, GET             /static/[filename]
+custom_webhook_CmdlineInput.health                 HEAD, OPTIONS, GET             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             OPTIONS, GET, HEAD             /static/[filename]
+custom_webhook_CmdlineInput.health                 OPTIONS, GET, HEAD             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'cuales son las becas de la utem' with intent '{'name': 'get_becas', 'confidence': 0.936516523361206}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	name: None
+Current tracker state [None, {}, {'intent_get_becas': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '6'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_getBecas' with prob 1.00.
+Calling action endpoint to run action 'action_getBecas'.
+Action 'action_getBecas' ended with events '[]'
+Bot utterance 'BotUttered(text: Actualmente la utem tienelas siguientes becas: ayudas eventuales, deporte y tu mamita, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{}, {'intent_get_becas': 1.0, 'prev_action_listen': 1.0}, {'intent_get_becas': 1.0, 'prev_action_getBecas': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             HEAD, GET, OPTIONS             /static/[filename]
+custom_webhook_CmdlineInput.health                 HEAD, GET, OPTIONS             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             HEAD, GET, OPTIONS             /static/[filename]
+custom_webhook_CmdlineInput.health                 HEAD, GET, OPTIONS             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             GET, HEAD, OPTIONS             /static/[filename]
+custom_webhook_CmdlineInput.health                 GET, HEAD, OPTIONS             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'holo' with intent '{'name': 'saludar', 'confidence': 0.9741933345794678}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	name: None
+Current tracker state [None, {}, {'prev_action_listen': 1.0, 'intent_saludar': 1.0}]
+There is a memorised next action '4'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'utter_saludar' with prob 1.00.
+Action 'utter_saludar' ended with events '[]'
+Bot utterance 'BotUttered(text: que tal, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{}, {'prev_action_listen': 1.0, 'intent_saludar': 1.0}, {'prev_utter_saludar': 1.0, 'intent_saludar': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'en que consiste la beca ayudas eventuales' with intent '{'name': 'get_becas', 'confidence': 0.9045568704605103}' and entities '[{'start': 24, 'end': 41, 'value': 'ayudas eventuales', 'entity': 'beca', 'confidence': 0.9504026289935179, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 6 events
+Current slot values: 
+	name: None
+Current tracker state [{'prev_action_listen': 1.0, 'intent_saludar': 1.0}, {'prev_utter_saludar': 1.0, 'intent_saludar': 1.0}, {'prev_action_listen': 1.0, 'intent_get_becas': 1.0, 'entity_beca': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_getBecas' with prob 0.35.
+Calling action endpoint to run action 'action_getBecas'.
+Action 'action_getBecas' ended with events '[]'
+Bot utterance 'BotUttered(text: Actualmente la utem tienelas siguientes becas: ayudas eventuales, deporte y tu mamita, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'prev_utter_saludar': 1.0, 'intent_saludar': 1.0}, {'prev_action_listen': 1.0, 'intent_get_becas': 1.0, 'entity_beca': 1.0}, {'intent_get_becas': 1.0, 'entity_beca': 1.0, 'prev_action_getBecas': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 0.85.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             OPTIONS, HEAD, GET             /static/[filename]
+custom_webhook_CmdlineInput.health                 OPTIONS, HEAD, GET             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'cuacual es la beca de ayudas eventuales' with intent '{'name': 'get_becas', 'confidence': 0.9647049903869629}' and entities '[{'start': 22, 'end': 39, 'value': 'ayudas eventuales', 'entity': 'beca', 'confidence': 0.9296468536239583, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	name: None
+Current tracker state [None, {}, {'prev_action_listen': 1.0, 'entity_beca': 1.0, 'intent_get_becas': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_getBecas' with prob 0.32.
+Calling action endpoint to run action 'action_getBecas'.
+Failed to run custom action 'action_getBecas'. Action server responded with a non 200 status code of 500. Make sure your action server properly runs actions and returns a 200 once the action is executed. Error: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+Encountered an exception while running action 'action_getBecas'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Failed to execute custom action.
+Traceback (most recent call last):
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 338, in run
+    response.raise_for_status()
+  File "/home/rolando/.local/lib/python3.6/site-packages/requests/models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/processor.py", line 351, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 358, in run
+    raise Exception("Failed to execute custom action.")
+Exception: Failed to execute custom action.
+Action 'action_getBecas' ended with events '[]'
+Current tracker state [{}, {'prev_action_listen': 1.0, 'entity_beca': 1.0, 'intent_get_becas': 1.0}, {'prev_action_getBecas': 1.0, 'entity_beca': 1.0, 'intent_get_becas': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 0.66.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             OPTIONS, HEAD, GET             /static/[filename]
+custom_webhook_CmdlineInput.health                 OPTIONS, HEAD, GET             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'en que consiste la beca ayudas eventuales' with intent '{'name': 'get_becas', 'confidence': 0.9045568704605103}' and entities '[{'start': 24, 'end': 41, 'value': 'ayudas eventuales', 'entity': 'beca', 'confidence': 0.9504026289935179, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	name: None
+Current tracker state [None, {}, {'prev_action_listen': 1.0, 'entity_beca': 1.0, 'intent_get_becas': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_getBecas' with prob 0.32.
+Calling action endpoint to run action 'action_getBecas'.
+Action 'action_getBecas' ended with events '[]'
+Bot utterance 'BotUttered(text: Actualmente la utem tienelas siguientes becas: ayudas eventuales, deporte y tu mamita, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{}, {'prev_action_listen': 1.0, 'entity_beca': 1.0, 'intent_get_becas': 1.0}, {'prev_action_getBecas': 1.0, 'entity_beca': 1.0, 'intent_get_becas': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 0.66.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             HEAD, GET, OPTIONS             /static/[filename]
+custom_webhook_CmdlineInput.health                 HEAD, GET, OPTIONS             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'cual es la beca ayudas eventuales' with intent '{'name': 'get_becas', 'confidence': 0.9356435537338257}' and entities '[{'start': 16, 'end': 33, 'value': 'ayudas eventuales', 'entity': 'beca', 'confidence': 0.950401460292343, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	name: None
+Current tracker state [None, {}, {'entity_beca': 1.0, 'prev_action_listen': 1.0, 'intent_get_becas': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_getBecas' with prob 0.32.
+Calling action endpoint to run action 'action_getBecas'.
+Failed to run custom action 'action_getBecas'. Action server responded with a non 200 status code of 500. Make sure your action server properly runs actions and returns a 200 once the action is executed. Error: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+Encountered an exception while running action 'action_getBecas'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Failed to execute custom action.
+Traceback (most recent call last):
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 338, in run
+    response.raise_for_status()
+  File "/home/rolando/.local/lib/python3.6/site-packages/requests/models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/processor.py", line 351, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 358, in run
+    raise Exception("Failed to execute custom action.")
+Exception: Failed to execute custom action.
+Action 'action_getBecas' ended with events '[]'
+Current tracker state [{}, {'entity_beca': 1.0, 'prev_action_listen': 1.0, 'intent_get_becas': 1.0}, {'entity_beca': 1.0, 'prev_action_getBecas': 1.0, 'intent_get_becas': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 0.66.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             OPTIONS, HEAD, GET             /static/[filename]
+custom_webhook_CmdlineInput.health                 OPTIONS, HEAD, GET             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'cual es la beca de ayudas eventuales' with intent '{'name': 'get_becas', 'confidence': 0.9541147351264954}' and entities '[{'start': 19, 'end': 36, 'value': 'ayudas eventuales', 'entity': 'beca', 'confidence': 0.9296468536239583, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	name: None
+Current tracker state [None, {}, {'intent_get_becas': 1.0, 'entity_beca': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_getBecas' with prob 0.32.
+Calling action endpoint to run action 'action_getBecas'.
+Failed to run custom action 'action_getBecas'. Action server responded with a non 200 status code of 500. Make sure your action server properly runs actions and returns a 200 once the action is executed. Error: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+Encountered an exception while running action 'action_getBecas'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Failed to execute custom action.
+Traceback (most recent call last):
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 338, in run
+    response.raise_for_status()
+  File "/home/rolando/.local/lib/python3.6/site-packages/requests/models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/processor.py", line 351, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 358, in run
+    raise Exception("Failed to execute custom action.")
+Exception: Failed to execute custom action.
+Action 'action_getBecas' ended with events '[]'
+Current tracker state [{}, {'intent_get_becas': 1.0, 'entity_beca': 1.0, 'prev_action_listen': 1.0}, {'intent_get_becas': 1.0, 'entity_beca': 1.0, 'prev_action_getBecas': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 0.66.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             HEAD, OPTIONS, GET             /static/[filename]
+custom_webhook_CmdlineInput.health                 HEAD, OPTIONS, GET             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'en que consiste la beca ayudas eventuales' with intent '{'name': 'get_becas', 'confidence': 0.9045568704605103}' and entities '[{'start': 24, 'end': 41, 'value': 'ayudas eventuales', 'entity': 'beca', 'confidence': 0.9504026289935179, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	name: None
+Current tracker state [None, {}, {'intent_get_becas': 1.0, 'entity_beca': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_getBecas' with prob 0.32.
+Calling action endpoint to run action 'action_getBecas'.
+Failed to run custom action 'action_getBecas'. Action server responded with a non 200 status code of 500. Make sure your action server properly runs actions and returns a 200 once the action is executed. Error: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+Encountered an exception while running action 'action_getBecas'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Failed to execute custom action.
+Traceback (most recent call last):
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 338, in run
+    response.raise_for_status()
+  File "/home/rolando/.local/lib/python3.6/site-packages/requests/models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/processor.py", line 351, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 358, in run
+    raise Exception("Failed to execute custom action.")
+Exception: Failed to execute custom action.
+Action 'action_getBecas' ended with events '[]'
+Current tracker state [{}, {'intent_get_becas': 1.0, 'entity_beca': 1.0, 'prev_action_listen': 1.0}, {'intent_get_becas': 1.0, 'entity_beca': 1.0, 'prev_action_getBecas': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 0.66.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             GET, OPTIONS, HEAD             /static/[filename]
+custom_webhook_CmdlineInput.health                 GET, OPTIONS, HEAD             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'en que consiste la beca de ayudas eventuales' with intent '{'name': 'get_becas', 'confidence': 0.9361295700073242}' and entities '[{'start': 27, 'end': 44, 'value': 'ayudas eventuales', 'entity': 'beca', 'confidence': 0.92964698245848, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	name: None
+Current tracker state [None, {}, {'intent_get_becas': 1.0, 'entity_beca': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_getBecas' with prob 0.32.
+Calling action endpoint to run action 'action_getBecas'.
+Action 'action_getBecas' ended with events '[]'
+Bot utterance 'BotUttered(text: Actualmente la utem tienelas siguientes becas: ayudas eventuales, deporte y tu mamita, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{}, {'intent_get_becas': 1.0, 'entity_beca': 1.0, 'prev_action_listen': 1.0}, {'intent_get_becas': 1.0, 'entity_beca': 1.0, 'prev_action_getBecas': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 0.66.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'cuales becas tiene la utem' with intent '{'name': 'get_becas', 'confidence': 0.7255875468254089}' and entities '[]'
+Logged UserUtterance - tracker now has 6 events
+Current slot values: 
+	name: None
+Current tracker state [{'intent_get_becas': 1.0, 'entity_beca': 1.0, 'prev_action_listen': 1.0}, {'intent_get_becas': 1.0, 'entity_beca': 1.0, 'prev_action_getBecas': 1.0}, {'intent_get_becas': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_getBecas' with prob 0.51.
+Calling action endpoint to run action 'action_getBecas'.
+Action 'action_getBecas' ended with events '[]'
+Bot utterance 'BotUttered(text: Actualmente la utem tienelas siguientes becas: ayudas eventuales, deporte y tu mamita, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'intent_get_becas': 1.0, 'entity_beca': 1.0, 'prev_action_getBecas': 1.0}, {'intent_get_becas': 1.0, 'prev_action_listen': 1.0}, {'intent_get_becas': 1.0, 'prev_action_getBecas': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 0.84.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             GET, HEAD, OPTIONS             /static/[filename]
+custom_webhook_CmdlineInput.health                 GET, HEAD, OPTIONS             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'en que consiste la beca de ayudas eventuales' with intent '{'name': 'get_becas', 'confidence': 0.9361295700073242}' and entities '[{'start': 27, 'end': 44, 'value': 'ayudas eventuales', 'entity': 'beca', 'confidence': 0.92964698245848, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	name: None
+Current tracker state [None, {}, {'prev_action_listen': 1.0, 'entity_beca': 1.0, 'intent_get_becas': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_getBecas' with prob 0.32.
+Calling action endpoint to run action 'action_getBecas'.
+Failed to run custom action 'action_getBecas'. Action server responded with a non 200 status code of 500. Make sure your action server properly runs actions and returns a 200 once the action is executed. Error: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+Encountered an exception while running action 'action_getBecas'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Failed to execute custom action.
+Traceback (most recent call last):
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 338, in run
+    response.raise_for_status()
+  File "/home/rolando/.local/lib/python3.6/site-packages/requests/models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/processor.py", line 351, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 358, in run
+    raise Exception("Failed to execute custom action.")
+Exception: Failed to execute custom action.
+Action 'action_getBecas' ended with events '[]'
+Current tracker state [{}, {'prev_action_listen': 1.0, 'entity_beca': 1.0, 'intent_get_becas': 1.0}, {'entity_beca': 1.0, 'intent_get_becas': 1.0, 'prev_action_getBecas': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 0.66.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             GET, OPTIONS, HEAD             /static/[filename]
+custom_webhook_CmdlineInput.health                 GET, OPTIONS, HEAD             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'en que consiste la beca ayudas eventuales' with intent '{'name': 'get_becas', 'confidence': 0.9045568704605103}' and entities '[{'start': 24, 'end': 41, 'value': 'ayudas eventuales', 'entity': 'beca', 'confidence': 0.9504026289935179, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	name: None
+Current tracker state [None, {}, {'entity_beca': 1.0, 'prev_action_listen': 1.0, 'intent_get_becas': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_getBecas' with prob 0.32.
+Calling action endpoint to run action 'action_getBecas'.
+Failed to run custom action 'action_getBecas'. Action server responded with a non 200 status code of 500. Make sure your action server properly runs actions and returns a 200 once the action is executed. Error: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+Encountered an exception while running action 'action_getBecas'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Failed to execute custom action.
+Traceback (most recent call last):
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 338, in run
+    response.raise_for_status()
+  File "/home/rolando/.local/lib/python3.6/site-packages/requests/models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/processor.py", line 351, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 358, in run
+    raise Exception("Failed to execute custom action.")
+Exception: Failed to execute custom action.
+Action 'action_getBecas' ended with events '[]'
+Current tracker state [{}, {'entity_beca': 1.0, 'prev_action_listen': 1.0, 'intent_get_becas': 1.0}, {'entity_beca': 1.0, 'prev_action_getBecas': 1.0, 'intent_get_becas': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 0.66.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             HEAD, GET, OPTIONS             /static/[filename]
+custom_webhook_CmdlineInput.health                 HEAD, GET, OPTIONS             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'en que consiste la beca de ayudas eventuales' with intent '{'name': 'get_becas', 'confidence': 0.9361295700073242}' and entities '[{'start': 27, 'end': 44, 'value': 'ayudas eventuales', 'entity': 'beca', 'confidence': 0.92964698245848, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	name: None
+Current tracker state [None, {}, {'prev_action_listen': 1.0, 'intent_get_becas': 1.0, 'entity_beca': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_getBecas' with prob 0.32.
+Calling action endpoint to run action 'action_getBecas'.
+Failed to run custom action 'action_getBecas'. Action server responded with a non 200 status code of 500. Make sure your action server properly runs actions and returns a 200 once the action is executed. Error: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+Encountered an exception while running action 'action_getBecas'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Failed to execute custom action.
+Traceback (most recent call last):
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 338, in run
+    response.raise_for_status()
+  File "/home/rolando/.local/lib/python3.6/site-packages/requests/models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/processor.py", line 351, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 358, in run
+    raise Exception("Failed to execute custom action.")
+Exception: Failed to execute custom action.
+Action 'action_getBecas' ended with events '[]'
+Current tracker state [{}, {'prev_action_listen': 1.0, 'intent_get_becas': 1.0, 'entity_beca': 1.0}, {'prev_action_getBecas': 1.0, 'intent_get_becas': 1.0, 'entity_beca': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 0.66.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             GET, HEAD, OPTIONS             /static/[filename]
+custom_webhook_CmdlineInput.health                 GET, HEAD, OPTIONS             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'en que consiste la beca de ayudas eventuales' with intent '{'name': 'get_becas', 'confidence': 0.9361295700073242}' and entities '[{'start': 27, 'end': 44, 'value': 'ayudas eventuales', 'entity': 'beca', 'confidence': 0.92964698245848, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	name: None
+Current tracker state [None, {}, {'prev_action_listen': 1.0, 'entity_beca': 1.0, 'intent_get_becas': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_getBecas' with prob 0.32.
+Calling action endpoint to run action 'action_getBecas'.
+Failed to run custom action 'action_getBecas'. Action server responded with a non 200 status code of 500. Make sure your action server properly runs actions and returns a 200 once the action is executed. Error: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+Encountered an exception while running action 'action_getBecas'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Failed to execute custom action.
+Traceback (most recent call last):
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 338, in run
+    response.raise_for_status()
+  File "/home/rolando/.local/lib/python3.6/site-packages/requests/models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/processor.py", line 351, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 358, in run
+    raise Exception("Failed to execute custom action.")
+Exception: Failed to execute custom action.
+Action 'action_getBecas' ended with events '[]'
+Current tracker state [{}, {'prev_action_listen': 1.0, 'entity_beca': 1.0, 'intent_get_becas': 1.0}, {'entity_beca': 1.0, 'prev_action_getBecas': 1.0, 'intent_get_becas': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 0.66.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             GET, OPTIONS, HEAD             /static/[filename]
+custom_webhook_CmdlineInput.health                 GET, OPTIONS, HEAD             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'en que consiste la beca de ayudas eventuales' with intent '{'name': 'get_becas', 'confidence': 0.9361295700073242}' and entities '[{'start': 27, 'end': 44, 'value': 'ayudas eventuales', 'entity': 'beca', 'confidence': 0.92964698245848, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	name: None
+Current tracker state [None, {}, {'entity_beca': 1.0, 'intent_get_becas': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_getBecas' with prob 0.32.
+Calling action endpoint to run action 'action_getBecas'.
+Failed to run custom action 'action_getBecas'. Action server responded with a non 200 status code of 500. Make sure your action server properly runs actions and returns a 200 once the action is executed. Error: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+Encountered an exception while running action 'action_getBecas'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Failed to execute custom action.
+Traceback (most recent call last):
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 338, in run
+    response.raise_for_status()
+  File "/home/rolando/.local/lib/python3.6/site-packages/requests/models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/processor.py", line 351, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 358, in run
+    raise Exception("Failed to execute custom action.")
+Exception: Failed to execute custom action.
+Action 'action_getBecas' ended with events '[]'
+Current tracker state [{}, {'entity_beca': 1.0, 'intent_get_becas': 1.0, 'prev_action_listen': 1.0}, {'entity_beca': 1.0, 'intent_get_becas': 1.0, 'prev_action_getBecas': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 0.66.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             OPTIONS, GET, HEAD             /static/[filename]
+custom_webhook_CmdlineInput.health                 OPTIONS, GET, HEAD             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'en que consiste la beca de ayudas eventuales' with intent '{'name': 'get_becas', 'confidence': 0.9361295700073242}' and entities '[{'start': 27, 'end': 44, 'value': 'ayudas eventuales', 'entity': 'beca', 'confidence': 0.92964698245848, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	name: None
+Current tracker state [None, {}, {'entity_beca': 1.0, 'intent_get_becas': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_getBecas' with prob 0.32.
+Calling action endpoint to run action 'action_getBecas'.
+Failed to run custom action 'action_getBecas'. Action server responded with a non 200 status code of 500. Make sure your action server properly runs actions and returns a 200 once the action is executed. Error: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+Encountered an exception while running action 'action_getBecas'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Failed to execute custom action.
+Traceback (most recent call last):
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 338, in run
+    response.raise_for_status()
+  File "/home/rolando/.local/lib/python3.6/site-packages/requests/models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/processor.py", line 351, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 358, in run
+    raise Exception("Failed to execute custom action.")
+Exception: Failed to execute custom action.
+Action 'action_getBecas' ended with events '[]'
+Current tracker state [{}, {'entity_beca': 1.0, 'intent_get_becas': 1.0, 'prev_action_listen': 1.0}, {'entity_beca': 1.0, 'intent_get_becas': 1.0, 'prev_action_getBecas': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 0.66.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             GET, OPTIONS, HEAD             /static/[filename]
+custom_webhook_CmdlineInput.health                 GET, OPTIONS, HEAD             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'en que consiste la beca ayudas eventuales' with intent '{'name': 'get_becas', 'confidence': 0.9045568704605103}' and entities '[{'start': 24, 'end': 41, 'value': 'ayudas eventuales', 'entity': 'beca', 'confidence': 0.9504026289935179, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	name: None
+Current tracker state [None, {}, {'prev_action_listen': 1.0, 'intent_get_becas': 1.0, 'entity_beca': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_getBecas' with prob 0.32.
+Calling action endpoint to run action 'action_getBecas'.
+Failed to run custom action 'action_getBecas'. Action server responded with a non 200 status code of 500. Make sure your action server properly runs actions and returns a 200 once the action is executed. Error: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+Encountered an exception while running action 'action_getBecas'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Failed to execute custom action.
+Traceback (most recent call last):
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 338, in run
+    response.raise_for_status()
+  File "/home/rolando/.local/lib/python3.6/site-packages/requests/models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/processor.py", line 351, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 358, in run
+    raise Exception("Failed to execute custom action.")
+Exception: Failed to execute custom action.
+Action 'action_getBecas' ended with events '[]'
+Current tracker state [{}, {'prev_action_listen': 1.0, 'intent_get_becas': 1.0, 'entity_beca': 1.0}, {'prev_action_getBecas': 1.0, 'intent_get_becas': 1.0, 'entity_beca': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 0.66.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             GET, OPTIONS, HEAD             /static/[filename]
+custom_webhook_CmdlineInput.health                 GET, OPTIONS, HEAD             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'en que consiste la beca de ayudas eventuales' with intent '{'name': 'get_becas', 'confidence': 0.9361295700073242}' and entities '[{'start': 27, 'end': 44, 'value': 'ayudas eventuales', 'entity': 'beca', 'confidence': 0.92964698245848, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	name: None
+Current tracker state [None, {}, {'entity_beca': 1.0, 'intent_get_becas': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_getBecas' with prob 0.32.
+Calling action endpoint to run action 'action_getBecas'.
+Failed to run custom action 'action_getBecas'. Action server responded with a non 200 status code of 500. Make sure your action server properly runs actions and returns a 200 once the action is executed. Error: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+Encountered an exception while running action 'action_getBecas'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Failed to execute custom action.
+Traceback (most recent call last):
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 338, in run
+    response.raise_for_status()
+  File "/home/rolando/.local/lib/python3.6/site-packages/requests/models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/processor.py", line 351, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 358, in run
+    raise Exception("Failed to execute custom action.")
+Exception: Failed to execute custom action.
+Action 'action_getBecas' ended with events '[]'
+Current tracker state [{}, {'entity_beca': 1.0, 'intent_get_becas': 1.0, 'prev_action_listen': 1.0}, {'entity_beca': 1.0, 'intent_get_becas': 1.0, 'prev_action_getBecas': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 0.66.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             HEAD, OPTIONS, GET             /static/[filename]
+custom_webhook_CmdlineInput.health                 HEAD, OPTIONS, GET             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             HEAD, OPTIONS, GET             /static/[filename]
+custom_webhook_CmdlineInput.health                 HEAD, OPTIONS, GET             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'en que consiste la beca de ayudas eventuales' with intent '{'name': 'get_becas', 'confidence': 0.9361295700073242}' and entities '[{'start': 27, 'end': 44, 'value': 'ayudas eventuales', 'entity': 'beca', 'confidence': 0.92964698245848, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	name: None
+Current tracker state [None, {}, {'entity_beca': 1.0, 'intent_get_becas': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_getBecas' with prob 0.32.
+Calling action endpoint to run action 'action_getBecas'.
+Failed to run custom action 'action_getBecas'. Action server responded with a non 200 status code of 500. Make sure your action server properly runs actions and returns a 200 once the action is executed. Error: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+Encountered an exception while running action 'action_getBecas'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Failed to execute custom action.
+Traceback (most recent call last):
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 338, in run
+    response.raise_for_status()
+  File "/home/rolando/.local/lib/python3.6/site-packages/requests/models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/processor.py", line 351, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 358, in run
+    raise Exception("Failed to execute custom action.")
+Exception: Failed to execute custom action.
+Action 'action_getBecas' ended with events '[]'
+Current tracker state [{}, {'entity_beca': 1.0, 'intent_get_becas': 1.0, 'prev_action_listen': 1.0}, {'entity_beca': 1.0, 'intent_get_becas': 1.0, 'prev_action_getBecas': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 0.66.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             HEAD, GET, OPTIONS             /static/[filename]
+custom_webhook_CmdlineInput.health                 HEAD, GET, OPTIONS             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'en que consiste la beca ayudas eventuales' with intent '{'name': 'get_becas', 'confidence': 0.9045568704605103}' and entities '[{'start': 24, 'end': 41, 'value': 'ayudas eventuales', 'entity': 'beca', 'confidence': 0.9504026289935179, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	name: None
+Current tracker state [None, {}, {'entity_beca': 1.0, 'intent_get_becas': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_getBecas' with prob 0.32.
+Calling action endpoint to run action 'action_getBecas'.
+Failed to run custom action 'action_getBecas'. Action server responded with a non 200 status code of 500. Make sure your action server properly runs actions and returns a 200 once the action is executed. Error: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+Encountered an exception while running action 'action_getBecas'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Failed to execute custom action.
+Traceback (most recent call last):
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 338, in run
+    response.raise_for_status()
+  File "/home/rolando/.local/lib/python3.6/site-packages/requests/models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/processor.py", line 351, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 358, in run
+    raise Exception("Failed to execute custom action.")
+Exception: Failed to execute custom action.
+Action 'action_getBecas' ended with events '[]'
+Current tracker state [{}, {'entity_beca': 1.0, 'intent_get_becas': 1.0, 'prev_action_listen': 1.0}, {'entity_beca': 1.0, 'prev_action_getBecas': 1.0, 'intent_get_becas': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 0.66.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             GET, HEAD, OPTIONS             /static/[filename]
+custom_webhook_CmdlineInput.health                 GET, HEAD, OPTIONS             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'en que consiste la beca ayudas eventuales' with intent '{'name': 'get_becas', 'confidence': 0.9045568704605103}' and entities '[{'start': 24, 'end': 41, 'value': 'ayudas eventuales', 'entity': 'beca', 'confidence': 0.9504026289935179, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	name: None
+Current tracker state [None, {}, {'intent_get_becas': 1.0, 'entity_beca': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_getBecas' with prob 0.32.
+Calling action endpoint to run action 'action_getBecas'.
+Action 'action_getBecas' ended with events '[]'
+Bot utterance 'BotUttered(text: hola miamor, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{}, {'intent_get_becas': 1.0, 'entity_beca': 1.0, 'prev_action_listen': 1.0}, {'prev_action_getBecas': 1.0, 'intent_get_becas': 1.0, 'entity_beca': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 0.66.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             OPTIONS, HEAD, GET             /static/[filename]
+custom_webhook_CmdlineInput.health                 OPTIONS, HEAD, GET             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'en que consiste la beca ayudas eventuales' with intent '{'name': 'get_becas', 'confidence': 0.9045568704605103}' and entities '[{'start': 24, 'end': 41, 'value': 'ayudas eventuales', 'entity': 'beca', 'confidence': 0.9504026289935179, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	name: None
+Current tracker state [None, {}, {'prev_action_listen': 1.0, 'entity_beca': 1.0, 'intent_get_becas': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_getBecas' with prob 0.32.
+Calling action endpoint to run action 'action_getBecas'.
+Failed to run custom action 'action_getBecas'. Action server responded with a non 200 status code of 500. Make sure your action server properly runs actions and returns a 200 once the action is executed. Error: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+Encountered an exception while running action 'action_getBecas'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Failed to execute custom action.
+Traceback (most recent call last):
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 338, in run
+    response.raise_for_status()
+  File "/home/rolando/.local/lib/python3.6/site-packages/requests/models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/processor.py", line 351, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 358, in run
+    raise Exception("Failed to execute custom action.")
+Exception: Failed to execute custom action.
+Action 'action_getBecas' ended with events '[]'
+Current tracker state [{}, {'prev_action_listen': 1.0, 'entity_beca': 1.0, 'intent_get_becas': 1.0}, {'entity_beca': 1.0, 'prev_action_getBecas': 1.0, 'intent_get_becas': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 0.66.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             HEAD, GET, OPTIONS             /static/[filename]
+custom_webhook_CmdlineInput.health                 HEAD, GET, OPTIONS             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'en que consiste la beca ayudas eventuales' with intent '{'name': 'get_becas', 'confidence': 0.9045568704605103}' and entities '[{'start': 24, 'end': 41, 'value': 'ayudas eventuales', 'entity': 'beca', 'confidence': 0.9504026289935179, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	name: None
+Current tracker state [None, {}, {'entity_beca': 1.0, 'prev_action_listen': 1.0, 'intent_get_becas': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_getBecas' with prob 0.32.
+Calling action endpoint to run action 'action_getBecas'.
+Failed to run custom action 'action_getBecas'. Action server responded with a non 200 status code of 500. Make sure your action server properly runs actions and returns a 200 once the action is executed. Error: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+Encountered an exception while running action 'action_getBecas'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Failed to execute custom action.
+Traceback (most recent call last):
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 338, in run
+    response.raise_for_status()
+  File "/home/rolando/.local/lib/python3.6/site-packages/requests/models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/processor.py", line 351, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 358, in run
+    raise Exception("Failed to execute custom action.")
+Exception: Failed to execute custom action.
+Action 'action_getBecas' ended with events '[]'
+Current tracker state [{}, {'entity_beca': 1.0, 'prev_action_listen': 1.0, 'intent_get_becas': 1.0}, {'entity_beca': 1.0, 'prev_action_getBecas': 1.0, 'intent_get_becas': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 0.66.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             HEAD, OPTIONS, GET             /static/[filename]
+custom_webhook_CmdlineInput.health                 HEAD, OPTIONS, GET             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'en que consiste la beca de ayudas eventuales' with intent '{'name': 'get_becas', 'confidence': 0.9361295700073242}' and entities '[{'start': 27, 'end': 44, 'value': 'ayudas eventuales', 'entity': 'beca', 'confidence': 0.92964698245848, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	name: None
+Current tracker state [None, {}, {'entity_beca': 1.0, 'intent_get_becas': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_getBecas' with prob 0.32.
+Calling action endpoint to run action 'action_getBecas'.
+Failed to run custom action 'action_getBecas'. Action server responded with a non 200 status code of 500. Make sure your action server properly runs actions and returns a 200 once the action is executed. Error: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+Encountered an exception while running action 'action_getBecas'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Failed to execute custom action.
+Traceback (most recent call last):
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 338, in run
+    response.raise_for_status()
+  File "/home/rolando/.local/lib/python3.6/site-packages/requests/models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/processor.py", line 351, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 358, in run
+    raise Exception("Failed to execute custom action.")
+Exception: Failed to execute custom action.
+Action 'action_getBecas' ended with events '[]'
+Current tracker state [{}, {'entity_beca': 1.0, 'intent_get_becas': 1.0, 'prev_action_listen': 1.0}, {'prev_action_getBecas': 1.0, 'entity_beca': 1.0, 'intent_get_becas': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 0.66.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             GET, OPTIONS, HEAD             /static/[filename]
+custom_webhook_CmdlineInput.health                 GET, OPTIONS, HEAD             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'en que consiste la beca de ayudas eventuales' with intent '{'name': 'get_becas', 'confidence': 0.9361295700073242}' and entities '[{'start': 27, 'end': 44, 'value': 'ayudas eventuales', 'entity': 'beca', 'confidence': 0.92964698245848, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	name: None
+Current tracker state [None, {}, {'prev_action_listen': 1.0, 'intent_get_becas': 1.0, 'entity_beca': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_getBecas' with prob 0.32.
+Calling action endpoint to run action 'action_getBecas'.
+Failed to run custom action 'action_getBecas'. Action server responded with a non 200 status code of 500. Make sure your action server properly runs actions and returns a 200 once the action is executed. Error: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+Encountered an exception while running action 'action_getBecas'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Failed to execute custom action.
+Traceback (most recent call last):
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 338, in run
+    response.raise_for_status()
+  File "/home/rolando/.local/lib/python3.6/site-packages/requests/models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:5055/webhook
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/processor.py", line 351, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 358, in run
+    raise Exception("Failed to execute custom action.")
+Exception: Failed to execute custom action.
+Action 'action_getBecas' ended with events '[]'
+Current tracker state [{}, {'prev_action_listen': 1.0, 'intent_get_becas': 1.0, 'entity_beca': 1.0}, {'prev_action_getBecas': 1.0, 'intent_get_becas': 1.0, 'entity_beca': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 0.66.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             GET, HEAD, OPTIONS             /static/[filename]
+custom_webhook_CmdlineInput.health                 GET, HEAD, OPTIONS             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'en que consiste la beca de ayudas eventuales' with intent '{'name': 'get_becas', 'confidence': 0.9361295700073242}' and entities '[{'start': 27, 'end': 44, 'value': 'ayudas eventuales', 'entity': 'beca', 'confidence': 0.92964698245848, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	name: None
+Current tracker state [None, {}, {'prev_action_listen': 1.0, 'intent_get_becas': 1.0, 'entity_beca': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_getBecas' with prob 0.32.
+Calling action endpoint to run action 'action_getBecas'.
+Failed to run custom action 'action_getBecas'. Couldn't connect to the server at 'http://localhost:5055/webhook'. Is the server running? Error: HTTPConnectionPool(host='localhost', port=5055): Max retries exceeded with url: /webhook (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f31c176d4a8>: Failed to establish a new connection: [Errno 111] Connection refused',))
+Encountered an exception while running action 'action_getBecas'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Failed to execute custom action.
+Traceback (most recent call last):
+  File "/home/rolando/.local/lib/python3.6/site-packages/urllib3/connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "/home/rolando/.local/lib/python3.6/site-packages/urllib3/util/connection.py", line 80, in create_connection
+    raise err
+  File "/home/rolando/.local/lib/python3.6/site-packages/urllib3/util/connection.py", line 70, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rolando/.local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/home/rolando/.local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python3.6/http/client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.6/http/client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.6/http/client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.6/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.6/http/client.py", line 964, in send
+    self.connect()
+  File "/home/rolando/.local/lib/python3.6/site-packages/urllib3/connection.py", line 181, in connect
+    conn = self._new_conn()
+  File "/home/rolando/.local/lib/python3.6/site-packages/urllib3/connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f31c176d4a8>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rolando/.local/lib/python3.6/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/rolando/.local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/home/rolando/.local/lib/python3.6/site-packages/urllib3/util/retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=5055): Max retries exceeded with url: /webhook (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f31c176d4a8>: Failed to establish a new connection: [Errno 111] Connection refused',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 327, in run
+    json=json, method="post", timeout=DEFAULT_REQUEST_TIMEOUT)
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/utils.py", line 748, in request
+    **kwargs)
+  File "/home/rolando/.local/lib/python3.6/site-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/rolando/.local/lib/python3.6/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/rolando/.local/lib/python3.6/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/rolando/.local/lib/python3.6/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=5055): Max retries exceeded with url: /webhook (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f31c176d4a8>: Failed to establish a new connection: [Errno 111] Connection refused',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/processor.py", line 351, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/home/rolando/.local/lib/python3.6/site-packages/rasa_core/actions/action.py", line 348, in run
+    raise Exception("Failed to execute custom action.")
+Exception: Failed to execute custom action.
+Action 'action_getBecas' ended with events '[]'
+Current tracker state [{}, {'prev_action_listen': 1.0, 'intent_get_becas': 1.0, 'entity_beca': 1.0}, {'prev_action_getBecas': 1.0, 'intent_get_becas': 1.0, 'entity_beca': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 0.66.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             OPTIONS, GET, HEAD             /static/[filename]
+custom_webhook_CmdlineInput.health                 OPTIONS, GET, HEAD             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'en que consiste la beca de ayudas eventuales' with intent '{'name': 'get_becas', 'confidence': 0.9361295700073242}' and entities '[{'start': 27, 'end': 44, 'value': 'ayudas eventuales', 'entity': 'beca', 'confidence': 0.92964698245848, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	name: None
+Current tracker state [None, {}, {'entity_beca': 1.0, 'intent_get_becas': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_getBecas' with prob 0.32.
+Calling action endpoint to run action 'action_getBecas'.
+Action 'action_getBecas' ended with events '[]'
+Bot utterance 'BotUttered(text: Actualmente la utem tienelas siguientes becas: ayudas eventuales, deporte y tu mamita, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{}, {'entity_beca': 1.0, 'intent_get_becas': 1.0, 'prev_action_listen': 1.0}, {'entity_beca': 1.0, 'intent_get_becas': 1.0, 'prev_action_getBecas': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 0.66.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             OPTIONS, HEAD, GET             /static/[filename]
+custom_webhook_CmdlineInput.health                 OPTIONS, HEAD, GET             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'en que consiste la beca de ayudas eventuales' with intent '{'name': 'get_becas', 'confidence': 0.9361295700073242}' and entities '[{'start': 27, 'end': 44, 'value': 'ayudas eventuales', 'entity': 'beca', 'confidence': 0.92964698245848, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	name: None
+Current tracker state [None, {}, {'prev_action_listen': 1.0, 'entity_beca': 1.0, 'intent_get_becas': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_getBecas' with prob 0.32.
+Calling action endpoint to run action 'action_getBecas'.
+Action 'action_getBecas' ended with events '[]'
+Bot utterance 'BotUttered(text: Actualmente la utem tienelas siguientes becas: ayudas eventuales, deporte y tu mamita, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{}, {'prev_action_listen': 1.0, 'entity_beca': 1.0, 'intent_get_becas': 1.0}, {'entity_beca': 1.0, 'intent_get_becas': 1.0, 'prev_action_getBecas': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 0.66.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'cuales son las becas de la utem' with intent '{'name': 'get_becas', 'confidence': 0.936516523361206}' and entities '[]'
+Logged UserUtterance - tracker now has 6 events
+Current slot values: 
+	name: None
+Current tracker state [{'prev_action_listen': 1.0, 'entity_beca': 1.0, 'intent_get_becas': 1.0}, {'entity_beca': 1.0, 'intent_get_becas': 1.0, 'prev_action_getBecas': 1.0}, {'prev_action_listen': 1.0, 'intent_get_becas': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_getBecas' with prob 0.51.
+Calling action endpoint to run action 'action_getBecas'.
+Action 'action_getBecas' ended with events '[]'
+Bot utterance 'BotUttered(text: Actualmente la utem tienelas siguientes becas: ayudas eventuales, deporte y tu mamita, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'entity_beca': 1.0, 'intent_get_becas': 1.0, 'prev_action_getBecas': 1.0}, {'prev_action_listen': 1.0, 'intent_get_becas': 1.0}, {'intent_get_becas': 1.0, 'prev_action_getBecas': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 0.84.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/nlu/intent_classifier_tensorflow_embedding.ckpt
+/home/rolando/.local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/home/rolando/.local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             OPTIONS, GET, HEAD             /static/[filename]
+custom_webhook_CmdlineInput.health                 OPTIONS, GET, HEAD             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'cuales son las becas de la utem' with intent '{'name': 'get_becas', 'confidence': 0.936516523361206}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	name: None
+Current tracker state [None, {}, {'prev_action_listen': 1.0, 'intent_get_becas': 1.0}]
+There is a memorised next action '6'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_getBecas' with prob 1.00.
+Calling action endpoint to run action 'action_getBecas'.
+Action 'action_getBecas' ended with events '[]'
+Bot utterance 'BotUttered(text: Actualmente la utem tiene las siguientes becas: ayudas eventuales, deporte y tu mamita, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{}, {'prev_action_listen': 1.0, 'intent_get_becas': 1.0}, {'intent_get_becas': 1.0, 'prev_action_getBecas': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'en que consiste la beca ayudas eventuales' with intent '{'name': 'get_becas', 'confidence': 0.9045568704605103}' and entities '[{'start': 24, 'end': 41, 'value': 'ayudas eventuales', 'entity': 'beca', 'confidence': 0.9504026289935179, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 6 events
+Current slot values: 
+	name: None
+Current tracker state [{'prev_action_listen': 1.0, 'intent_get_becas': 1.0}, {'intent_get_becas': 1.0, 'prev_action_getBecas': 1.0}, {'prev_action_listen': 1.0, 'intent_get_becas': 1.0, 'entity_beca': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_getBecas' with prob 0.44.
+Calling action endpoint to run action 'action_getBecas'.
+Action 'action_getBecas' ended with events '[]'
+Bot utterance 'BotUttered(text: hola miamor, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'intent_get_becas': 1.0, 'prev_action_getBecas': 1.0}, {'prev_action_listen': 1.0, 'intent_get_becas': 1.0, 'entity_beca': 1.0}, {'intent_get_becas': 1.0, 'prev_action_getBecas': 1.0, 'entity_beca': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 0.85.
+Action 'action_listen' ended with events '[]'

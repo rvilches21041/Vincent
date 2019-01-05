@@ -1,0 +1,25 @@
+{
+  "states": [
+    "intent_afirmar",
+    "intent_agradecer",
+    "intent_despedida",
+    "intent_get_becas",
+    "intent_get_cod_carr",
+    "intent_get_duracion_carr",
+    "intent_get_info_universidad",
+    "intent_negacion",
+    "intent_pregunta_acciones_bot",
+    "intent_pregunta_estado",
+    "intent_saludar",
+    "entity_carrera",
+    "entity_beca",
+    "slot_name_0",
+    "prev_action_listen",
+    "prev_action_restart",
+    "prev_action_default_fallback",
+    "prev_action_deactivate_form",
+    "prev_utter_saludar",
+    "prev_utter_despedirse",
+    "prev_action_getBecas"
+  ]
+}

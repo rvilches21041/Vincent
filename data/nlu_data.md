@@ -1,0 +1,283 @@
+## intent:get_becas
+- [excelencia deportiva](beca)
+- [alimentacion](beca)
+- [dinero](beca)
+- [ayudas eventuales](beca)
+- [exterior](beca)
+- necesito informacion de la beca [excelencia deportiva](beca)
+- quiero saber a cerca de la beca [excelencia deportiva](beca)
+- necesito informacion de la beca de [alimentacion](beca)
+- quiero saber a cerca de la beca [alimentacion](beca)
+- necesito informacion de la beca en [dinero](beca)
+- quiero saber a cerca de la beca [dinero](beca)
+- necesito informacion de la beca [ayudas eventuales](beca)
+- quiero saber a cerca de la beca [ayudas eventuales](beca)
+- necesito informacion de la beca al [exterior](beca)
+- quiero saber a cerca de la beca [exterior](beca)
+- quiero saber que tiene la beca [ayudas eventuales](beca)
+- me gustarìa saber a cerca de las becas de la utem
+- cuales son las becas que tienen
+- con que becas cuenta la utem
+- necesito informacion sobre las becas que manejan
+- quiero saber a cerca de los beneficios estudiantiles de la universidad
+ 
+##intent: get_cod_carr
+- me gustaria conocer el codigo de la carrera de [ingenieria en geomensura](carrera)
+- quiero saber el codigo de carrera de [ingenieria en comercio internacional](carrera)
+- de casualidad no sabes el codigo de la carrera [contador publico y auditor](carrera)
+- deseo saber el codigo de la carrera de [diseño en comunicacion visual](carrera)
+- me gustaria conocer el codigo de la carrera de [diseño industrial](carrera)
+- necesito saber el codigo demre de [ingenieria civil electronica](carrera)
+- quiero saber el codigo de carrera de [administracion publica](carrera)
+- me gustaria conocer el codigo de la carrera de [ingenieria quimica](carrera)
+- de casualidad no sabes el codigo de la carrera [ingenieria civil mecanica](carrera)
+- quiero saber el codigo de carrera de [bibliotecologia y documentacio](carrera)
+- de casualidad no sabes el codigo de la carrera [ingenieria civil en obras civiles](carrera)
+- cual es el codigo de [ingenieria civil prevencion de riesgos y medioambiente](carrera)
+- quiero saber el codigo de carrera de [ingenieria comercial](carrera)
+- me gustaria conocer el codigo de la carrera de [ingenieria en biotecnologia](carrera)
+- quiero saber el codigo de carrera de [ingenieria en construccion](carrera)
+- necesito saber el codigo demre de [ingenieria en gestion turistica](carrera)
+- me gustaria conocer el codigo de la carrera de [ingenieria en industria alimentaria](carrera)
+- quiero saber el codigo de carrera de [bachillerato en ciencias de la ingenieria](carrera)
+- deseo saber el codigo de la carrera de [quimica industrial](carrera)
+- me gustaria conocer el codigo de la carrera de [trabajo social](carrera)
+- quiero saber el codigo de carrera de [ingenieria civil en computacion](carrera)
+- de casualidad no sabes el codigo de la carrera [ingenieria civil industrial](carrera)
+- me gustaria conocer el codigo de la carrera de [ingenieria industrial](carrera)
+- necesito saber el codigo demre de [arquitectura](carrera)
+- me gustaria conocer el codigo de la carrera de [ingenieria en informatica](carrera)
+- deseo saber el codigo de la carrera de [dibujante proyectista](carrera)
+- quiero saber el codigo de carrera de [ingenieria en administracion agroindustrial](carrera)
+- me gustaria conocer el codigo de la carrera de [ingenieria en transporte y transito](carrera)
+
+##intent: get_duracion_carr
+- cuanto dura [administracion publica](carrera)
+- cuantos semestres dura la carrera [arquitectura](carrera)
+- cual es la duracion de la carrera [bachillerato en ciencias de la ingenieria](carrera)
+- y cuantos semestres dura [bibliotecologia y documentacio](carrera)
+- y me puedes decir cuantos semestres dura la carrera [contador publico y auditor](carrera)
+- entiendo, lo otro que necesito saber es cuanto dura la carrera [dibujante proyectista](carrera)
+- cuantos semestres dura la carrera [diseño en comunicacion visual](carrera)
+- y me puedes decir cuantos semestres dura la carrera [ingenieria civil mecanica](carrera)
+- cuanto dura [ingenieria civil prevencion de riesgos y medioambiente](carrera)
+- ok. pero cuanto dura la carrera [ingenieria comercial](carrera)
+- cuanto dura [ingenieria en administracion agroindustrial](carrera)
+- cuantos semestres dura la carrera[ingenieria en biotecnologia](carrera)
+- [ingenieria en comercio internacional](carrera)
+- puedo saber cuantos semetres son los que dura la carrera [ingenieria en construccion](carrera)
+- cuantos semestres dura la carrera [ingenieria en gestion turistica](carrera)
+- cuanto dura [ingenieria en industria alimentaria](carrera)
+- puedo saber cuantos semetres son los que dura la carrera [ingenieria quimica](carrera)
+- entiendo, lo otro que necesito saber es cuanto dura la carrera [quimica industrial](carrera)
+- y me puedes decir cuantos semestres dura la carrera [trabajo social](carrera)
+- cual es la duracion de la carrera [ingenieria civil en electronica](carrera)
+- cuantos semestres dura la carrera [ingenieria en geomensura](carrera)
+- cuantos años tiene de duracion [ingenieria en transporte y transito](carrera)
+- cuanto dura [diseño industrial](carrera)
+- y cuantos semestres dura
+- y me puedes decir cuantos semestres dura la carrera
+- puedo saber cuantos semetres son los que dura la carrera
+- necesito saber en cuantos semestres se termina la carrera
+- ok. pero cuanto dura la carrera
+- entiendo, lo otro que necesito saber es cuanto dura la carrera
+
+##intent: get_info_universidad
+- quiero saber mas sobre la universidad
+- cual es la historia de la universidad
+- como se llama la universidad
+- quien es el rector de la universidad
+- cual es la historia de la institucion
+- que es la utem
+- cual es la funcion de la utem
+- como se compone la historia de la utem
+- quien o que es la utem
+
+##intent: get_info_campus
+- cuales son los campus que tiene
+- como se llaman los campus que tiene la utem
+- como se llaman los campus que tiene la universidad tecnologica metropolitana
+- cuantos campus tiene la utem
+- cual es el numero de campus que tiene la universidad
+- con cuantos campus cuenta la universidad
+- cual es el numero de facultades
+- cuantas facultades tiene la universidad tecnologica metropolitana
+- cual es el numero de facultades que tiene la utem
+- cuantas sedes tiene la utem
+- cual es la cantidad de sedes que tiene la utem
+- quiero saber el numero de sedes que tiene la utem
+
+##intent: get_loc_campus
+- necesito saber la ubicacion de los campus
+- cual es la localizacion de las sedes
+- donde se encuentran las facultades
+- cual es la direccion de las sedes de la utem
+- cuales son las direcciones para las facultades de la utem
+- donde estan las sedes de la utem
+- en que parte estan las facultades de la utem
+- cuales son las direcciones de las sedes
+- quiero saber donde estan las sedes de la utem
+- donde se encuentran las sedes de la universidad tecnologica metropolitana
+
+## intent:pregunta_acciones_bot
+- ayuda
+- ayuda porfavor
+- ayuda, porfavor
+- no se que es lo que quiero
+- no sè què es lo que quiero
+- necesito ayuda
+- opciones
+- muestrame el menù
+- muestrame el menu
+- muestrame que es posible
+- que es lo que puedes hacer?
+- ¿que es lo que puedes hacer?
+- en que eres bueno?
+- que puedo hacer aquì
+- que puedo hacer con este bot
+- para que es este bot
+- puedo hacer algo mas aqui?
+- ayudame
+- hablame!
+- vuelve
+- como me puedes ayudar
+- que mas puedo hacer
+- hay alguna otra opcion?
+- que puedo hacer aqui
+- que puedo hacer ahora
+- ayuda?
+
+## intent:saludar
+- Hola
+- Hola bot
+- hola de nuevo
+- hola amigo
+- hola amiga
+- holi
+- holo
+- hola amigo
+- hola denuevo
+- hola robot
+- wena
+- wena hermano
+- wena compare
+- Hey
+- Hey bot
+- buenos dias
+- saludos
+- hola a todos
+- hola, hay alguien ahi
+- hola hay alguien ahi
+- hola, hay alguien ahi?
+- hola, hay alguien ahì?
+- hola, ¿hay alguien ahì?
+- hola robot
+- ola
+- hola?
+- hola, vamos a hablar
+- hola vamos a hablar
+- hola soy yo de nuevo
+- Buenas tardes
+- buenas noches
+
+## intent:pregunta_estado
+- como estas?
+- estas bien?
+- estas teniendo un buen dia?
+- te sientes bien?
+- como van las cosas?
+- como te trata la vida?
+- como le ha ido?
+- como te sientes?
+- como estas hoy?
+- como has estado?
+- como va tu dia?
+- como va la tarde?
+- como estuvo tu dia?
+- bien y tu
+- yo estoy bien y tu
+- esta todo bien?
+- que pasa
+
+## intent:agradecer
+- gracias
+- gracias a ti
+- muchas gracias
+- gracias bot
+- gracias por eso
+- saludos
+- saludos hermano
+- ok gracias!
+- perfecto gracias
+- muchas gracias por todo
+- gracias por la ayuda
+- de verdad muchas gracias
+- bacan, gracias
+- muy bien, gracias
+- gracias!
+- bacan. gracias
+
+## intent:afirmar
+- si
+- claro
+- obvio
+- por supuesto
+- ok
+- bacan
+- hare eso
+- sip
+- sipo
+- estoy seguro de que lo hare
+- oh bacan!
+- SI
+- acepto
+- yo acepto
+- ok de acuerdo
+- ok cool
+- lo hare!
+- oki doki
+- si porfavor
+- si porfavor!
+- confirmo
+- definitivamente si
+- perfecto
+- Oh, ok
+
+## intent:negacion
+- no
+- nica
+- nunca
+- obvio que no
+- yo no lo creo
+- no señor
+- no señora
+- disculpa, no
+- nah
+- no y no
+- no gracias
+- me niego 
+- no importa
+- no no acepto
+- no!!!!
+- no lo hiciste mal
+- eso no es lo que quiero
+- eso no es lo que queria
+- no no puedo
+- no estoy seguro
+- no gracias
+- ninguna de las anteriores
+
+## intent:despedida
+- adios
+- chao
+- chaolin
+- buenas noches
+- nos vemos
+- que tengas buenas noches
+- me tengo que ir
+- que estes bien
+- nos vemos despues
+- adios por ahora
+- chao, fue bacan hablar contigo
+- gracias, adios!
+- genial, gracias. Que estes bien

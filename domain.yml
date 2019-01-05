@@ -1,0 +1,43 @@
+intents:
+- get_becas
+- get_cod_carr
+- get_duracion_carr
+- get_info_universidad
+- pregunta_acciones_bot
+- saludar
+- pregunta_estado
+- agradecer
+- afirmar
+- negacion
+- despedida
+- get_info_campus
+- get_loc_campus
+
+entities:
+- carrera
+- beca
+
+slots:
+  name:
+    type: text
+
+actions:
+- utter_saludar
+- utter_despedirse
+- utter_acciones_bot
+- action_getBecas
+
+templates:
+  utter_saludar:
+  - text: "hola"
+  - text: "hola, soy vincent van bot"
+  - text: "que tal"
+
+  utter_despedirse:
+  - text: "chao"
+  - text: "chaolin"
+  - text: "Adios"
+
+  utter_acciones_bot:
+  - text: "Por el momento puedo informarte sobre códigos de carreras, duración de estas de carreras e información sobre la institución como historia, sus campus y ubicaciones."
+  

@@ -1,0 +1,48 @@
+%YAML 1.1
+---
+actions:
+- utter_saludar
+- utter_despedirse
+- action_getBecas
+config:
+  store_entities_as_slots: true
+entities:
+- carrera
+- beca
+forms: []
+intents:
+- get_becas:
+    use_entities: true
+- get_cod_carr:
+    use_entities: true
+- get_duracion_carr:
+    use_entities: true
+- get_info_universidad:
+    use_entities: true
+- pregunta_acciones_bot:
+    use_entities: true
+- saludar:
+    use_entities: true
+- pregunta_estado:
+    use_entities: true
+- agradecer:
+    use_entities: true
+- afirmar:
+    use_entities: true
+- negacion:
+    use_entities: true
+- despedida:
+    use_entities: true
+slots:
+  name:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+templates:
+  utter_despedirse:
+  - text: chao
+  - text: chaolin
+  utter_saludar:
+  - text: hola
+  - text: hola, soy vincent van bot
+  - text: que tal
